@@ -18,7 +18,8 @@ int menu_select() {
 	return select;
 }
 
-double inputtrans(void) {
+double inputtrans(void) 
+{
 	double x;
 
 	std::cout << "Please input x: " << std::endl;
@@ -30,6 +31,21 @@ double inputtrans(void) {
 	return (x * PI / 180.0);//角度or弧度
 }
 
+
+double inputasin(void)
+{
+	double x;
+	std::cout << "Please input x: " << std::endl;
+	std::cin >> x;
+	while (x > 1 || x < -1)
+	{
+		std::cout << "输入错误，请重新输入:" << std::endl;
+		std::cin >> x;
+	}
+	
+	return x;
+}
+
 double factorial(double n) {//阶乘
 	if (n <= 1) {
 		return n;
@@ -38,6 +54,7 @@ double factorial(double n) {//阶乘
 		return n * factorial(n - 1);
 	}
 }
+
 
 //下面为求绝对值函数
 double myabs(double num1)
@@ -66,18 +83,38 @@ double snowsin(double num2)
 }
 
 //求cos
-double snowcos(double x) {
-	return snowsin((PI / 2) - x);
+double snowcos(double x) 
+{
+	double sin = snowsin(x);//先求出SIN的值
+	double cos = 1 - sin * sin;//在通过公式减去SIN
+
+	return sqrt(cos);//开方
 }
 
 //求arcsin x的范围要变化（-1，1）
-double snowarcsin(double x) {
-	x = ;
-	return ();
+float snowarcsin(float x) 
+{
+	float result = x, result_a=1.0f, result_b=1.0f,result_c=1.0f;//定义变量
+	unsigned int i = 0, ii = 0;//此方法有一定的精度误差，越靠近1精度误差越大
+	for (i = 0; i < 1000; i++)
+	{
+		for (ii = 0; ii < (2 * i + 1); ii++)
+		{
+			result_a *= (float)(2 * ii + 1) / (float)(2 * ii + 2);
+			result_b *= (x*x);
+		}
+		result_b = x;
+		result_c = result_a / (float)(ii + 2);
+		result += (float)(result_c)*(float)result_b;
+		result_a = 1.0f; result_a = 1.0f;
+
+	}
+	return result;
+	
 }
 
 double snowarctan(double x) {
-	return ();
+	return (1);
 }
 
 int main()
@@ -100,7 +137,7 @@ int main()
 			std::cout << std::fixed << std::setprecision(5) << "Result =  " << result << std::endl;
 			break;
 		case 3:
-			x = inputtrans();
+			x = inputasin();
 			result = snowarcsin(x);
 			std::cout << std::fixed << std::setprecision(5) << "Result =  " << result << std::endl;
 			break;
