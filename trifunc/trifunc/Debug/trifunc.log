@@ -1,0 +1,3 @@
+﻿  trifunc.cpp
+d:\c++\11111\trifunc\trifunc\trifunc.cpp(165): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+  trifunc.vcxproj -> D:\C++\11111\trifunc\Debug\trifunc.exe
