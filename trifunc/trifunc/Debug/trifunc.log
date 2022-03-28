@@ -1,3 +1,4 @@
 ﻿  trifunc.cpp
-d:\c++\11111\trifunc\trifunc\trifunc.cpp(165): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
-  trifunc.vcxproj -> D:\C++\11111\trifunc\Debug\trifunc.exe
+e:\function\tri-function\trifunc\trifunc\trifunc.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\function\tri-function\trifunc\trifunc\trifunc.cpp(202): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+  trifunc.vcxproj -> E:\function\tri-function\trifunc\Debug\trifunc.exe

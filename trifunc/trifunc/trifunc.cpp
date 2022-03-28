@@ -67,6 +67,13 @@ double inputasin(void)//输入弧度
 
 	return x;
 }
+double inputatan(void)//输入数
+{
+	double x;
+	std::cout << "please input a number" << std::endl;
+	std::cin >> x;
+	return x;
+}
 
 double factorial(double n) {//阶乘
 	if (n <= 1) {
@@ -135,10 +142,40 @@ float snowarcsin(float x)
 
 }
 
-//求arctan
-double snowarctan(double x) {
-
-	return (1);
+//求arctan，输入数，求出弧度
+double snowarctan(double x)
+{
+	double sqr = x * x;
+	double e = x;
+	double r = 0;
+	int i = 1;
+	if (e >= -1 && e <= 1)//泰勒级数
+	{
+		while (fabs(e / i) > 1e-7)
+		{
+			double f = e / i;
+			r = (i % 4 == 1) ? r + f : r - f;
+			e = e * sqr;
+			i += 2;
+		}
+	}
+	if (e <= -1 || e >= 1)//arctan(x)+arctan(1/x)=π/2
+	{
+		e = 1 / e;
+		double h = e * e;
+		while (fabs(e / i) > 1e-7)
+		{
+			double f = e / i;
+			r = (i % 4 == 1) ? r + f : r - f;
+			e = e * h;
+			i += 2;
+		}
+		if (e > 0)
+			r = PI / 2 - r;
+		else
+			r = -PI / 2 - r;
+	}
+	return r;
 }
 
 int main()
@@ -166,7 +203,7 @@ int main()
 			std::cout << std::fixed << std::setprecision(5) << "Result =  " << result << std::endl;
 			break;
 		case 4:
-			x = inputtrans();
+			x = inputatan();
 			result = snowarctan(x);
 			std::cout << std::fixed << std::setprecision(5) << "Result =  " << result << std::endl;
 			break;
