@@ -3,21 +3,10 @@
 #include <iomanip>
 #include"calc.h"
 #include "pch.h"
+/*
+功能：四种三角函数计算函数，calc.h中有声明函数，在MFC_CACL_UIDlg.c完成调用
+*/
 constexpr auto PI = 3.1415926;
-
-//int menu_select() {
-//	int select;
-//	std::cout << "-------Welcome to Snow Calculator-------" << std::endl;
-//	std::cout << "               1. sin x                 " << std::endl;
-//	std::cout << "               2. cos x                 " << std::endl;
-//	std::cout << "               3. arcsin x              " << std::endl;
-//	std::cout << "               4. arctan x              " << std::endl;
-//	std::cout << "               5. Clean screen          " << std::endl;
-//	std::cout << "               0. to quit               " << std::endl;
-//	std::cout << "----------------------------------------" << std::endl;
-//	std::cin >> select;
-//	return select;
-//}
 
 //double inputtrans(void) 
 double inputtrans(double x)
@@ -32,21 +21,6 @@ double inputtrans(double x)
 	}
 	return (x * PI / 180.0);//角度or弧度
 }
-
-
-//double inputasin(void)
-//{
-//	double x;
-//	//std::cout << "Please input x: " << std::endl;
-//	//std::cin >> x;
-//	while (x > 1 || x < -1)
-//	{
-//		//std::cout << "输入错误，请重新输入:" << std::endl;
-//		//std::cin >> x;
-//	}
-//
-//	return x;
-//}
 
 double factorial(double n) {//阶乘
 	if (n <= 1) {
@@ -99,24 +73,43 @@ double snowcos(double x)
 }
 
 //求arcsin x的范围要变化（-1，1）
-float snowarcsin(float x)
+double snowarcsin(double x)
 {
-	float result = x, result_a = 1.0f, result_b = 1.0f, result_c = 1.0f;//定义变量
-	unsigned int i = 0, ii = 0;//此方法有一定的精度误差，越靠近1精度误差越大
-	for (i = 0; i < 1000; i++)
-	{
-		for (ii = 0; ii < (2 * i + 1); ii++)
-		{
-			result_a *= (float)(2 * ii + 1) / (float)(2 * ii + 2);
-			result_b *= (x*x);
-		}
-		result_b = x;
-		result_c = result_a / (float)(ii + 2);
-		result += (float)(result_c)*(float)result_b;
-		result_a = 1.0f; result_a = 1.0f;
+	//float result = x, result_a = 1.0f, result_b = 1.0f, result_c = 1.0f;//定义变量
+	//unsigned int i = 0, ii = 0;//此方法有一定的精度误差，越靠近1精度误差越大
+	//for (i = 0; i < 1000; i++)
+	//{
+	//	for (ii = 0; ii < (2 * i + 1); ii++)
+	//	{
+	//		result_a *= (float)(2 * ii + 1) / (float)(2 * ii + 2);
+	//		result_b *= (x*x);
+	//	}
+	//	result_b = x;
+	//	result_c = result_a / (float)(ii + 2);
+	//	result += (float)(result_c)*(float)result_b;
+	//	result_a = 1.0f; result_a = 1.0f;
 
+	//}
+	//return result;
+	//更改后的版本，更加精确
+	double Y;
+	if (-1 < x&& x < 1)
+	{
+		Y = ((((((((((355.8344664968055) * x*x -
+			1527.866163211568)*x *x + 2753.832624036205)*x *x - 2703.664106042975)*x *x +
+			1570.005944165283)*x *x - 547.8511412592482)*x *x + 111.6022805454461)*x *x - 12.131229199997044)*x*x + 0.767998895934955)*x *x
+			+ 0.991408990431597)*x;
 	}
-	return result;
+	else if (x == 1)
+	{
+		Y = PI / 2;
+	}
+	else
+	{
+		Y = -(PI / 2);
+	}
+
+	return Y;
 
 }
 

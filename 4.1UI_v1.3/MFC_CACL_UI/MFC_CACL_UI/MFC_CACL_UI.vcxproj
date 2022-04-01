@@ -188,6 +188,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="calc.h" />
+    <ClInclude Include="CTipDlg.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MFC_CACL_UI.h" />
     <ClInclude Include="MFC_CACL_UIDlg.h" />
@@ -197,6 +198,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="calc.cpp" />
+    <ClCompile Include="CTipDlg.cpp" />
     <ClCompile Include="MFC_CACL_UI.cpp" />
     <ClCompile Include="MFC_CACL_UIDlg.cpp" />
     <ClCompile Include="pch.cpp">
