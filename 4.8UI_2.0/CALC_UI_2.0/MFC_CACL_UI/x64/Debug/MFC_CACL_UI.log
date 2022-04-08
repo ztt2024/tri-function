@@ -1,0 +1,6 @@
+﻿  MFC_CACL_UI.cpp
+  MFC_CACL_UIDlg.cpp
+d:\c++\calc_ui_2.0\mfc_cacl_ui\fnsin.h(10): warning C4005: “PI”: 宏重定义
+  d:\c++\calc_ui_2.0\mfc_cacl_ui\fnarcsin.h(5): note: 参见“PI”的前一个定义
+  正在生成代码...
+  MFC_CACL_UI.vcxproj -> D:\C++\CALC_UI_2.0\x64\Debug\MFC_CACL_UI.exe
