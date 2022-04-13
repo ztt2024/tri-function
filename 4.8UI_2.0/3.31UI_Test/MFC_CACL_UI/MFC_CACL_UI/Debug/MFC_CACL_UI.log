@@ -1,0 +1,6 @@
+﻿  CTipDig.cpp
+  MFC_CACL_UI.cpp
+  MFC_CACL_UIDlg.cpp
+e:\软件工程作业\2.0版本\3.31ui_test\mfc_cacl_ui\mfc_cacl_ui\mfc_cacl_uidlg.cpp(685): warning C4244: “参数”: 从“double”转换到“float”，可能丢失数据
+  正在生成代码...
+  MFC_CACL_UI.vcxproj -> E:\软件工程作业\2.0版本\3.31UI_Test\MFC_CACL_UI\Debug\MFC_CACL_UI.exe
