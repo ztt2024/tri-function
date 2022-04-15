@@ -1,0 +1,9 @@
+﻿  MFC_CACL_UIDlg.cpp
+e:\软件工程作业\测试\tri-function\4.14ui_v2.4\4.14ui_v2.4\mfc_cacl_ui\mfc_cacl_ui\fncos.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\软件工程作业\测试\tri-function\4.14ui_v2.4\4.14ui_v2.4\mfc_cacl_ui\mfc_cacl_ui\fnsin.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\软件工程作业\测试\tri-function\4.14ui_v2.4\4.14ui_v2.4\mfc_cacl_ui\mfc_cacl_ui\fnarcsin.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\软件工程作业\测试\tri-function\4.14ui_v2.4\4.14ui_v2.4\mfc_cacl_ui\mfc_cacl_ui\fnarcsin.h(3): warning C4005: “PI”: 宏重定义
+  e:\软件工程作业\测试\tri-function\4.14ui_v2.4\4.14ui_v2.4\mfc_cacl_ui\mfc_cacl_ui\fnsin.h(10): note: 参见“PI”的前一个定义
+e:\软件工程作业\测试\tri-function\4.14ui_v2.4\4.14ui_v2.4\mfc_cacl_ui\mfc_cacl_ui\fnarctan.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+e:\软件工程作业\测试\tri-function\4.14ui_v2.4\4.14ui_v2.4\mfc_cacl_ui\mfc_cacl_ui\mfc_cacl_uidlg.cpp(676): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+  MFC_CACL_UI.vcxproj -> E:\软件工程作业\测试\tri-function\4.14UI_v2.4\4.14UI_v2.4\MFC_CACL_UI\x64\Debug\MFC_CACL_UI.exe
